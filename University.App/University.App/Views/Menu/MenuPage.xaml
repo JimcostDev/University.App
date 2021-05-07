@@ -4,10 +4,10 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              x:Class="University.App.Views.Menu.MenuPage"
              Title="Menu"
-             BackgroundColor="Gray">
+             BackgroundColor="{DynamicResource Gray-900}">
     <ContentPage.Content>
         <StackLayout Padding="5">
-            <Image Source="logo_complete" WidthRequest="250" />
+            <Image Source="logo_complete" WidthRequest="128" />
             <ListView ItemsSource="{Binding Menu}"
                       HasUnevenRows="True">
                 <ListView.ItemTemplate>

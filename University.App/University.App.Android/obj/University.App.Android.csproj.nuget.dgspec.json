@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App.Android\\University.App.Android.csproj": {}
+    "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App.Android\\University.App.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App.Android\\University.App.Android.csproj": {
+    "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App.Android\\University.App.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App.Android\\University.App.Android.csproj",
+        "projectUniqueName": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App.Android\\University.App.Android.csproj",
         "projectName": "University.App.Android",
-        "projectPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App.Android\\University.App.Android.csproj",
+        "projectPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App.Android\\University.App.Android.csproj",
         "packagesPath": "C:\\Users\\Ronaldo Jimenez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App.Android\\obj\\",
+        "outputPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App\\University.App.csproj": {
-                "projectPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App\\University.App.csproj"
+              "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App\\University.App.csproj": {
+                "projectPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App\\University.App.csproj"
               }
             }
           }
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App\\University.App.csproj": {
+    "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App\\University.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App\\University.App.csproj",
+        "projectUniqueName": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App\\University.App.csproj",
         "projectName": "University.App",
-        "projectPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App\\University.App.csproj",
+        "projectPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App\\University.App.csproj",
         "packagesPath": "C:\\Users\\Ronaldo Jimenez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App\\obj\\",
+        "outputPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -86,8 +86,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.BL\\University.BL.csproj": {
-                "projectPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.BL\\University.BL.csproj"
+              "C:\\workspace-xamarin\\Movil_II\\University\\University.BL\\University.BL.csproj": {
+                "projectPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.BL\\University.BL.csproj"
               }
             }
           }
@@ -131,11 +131,11 @@
         }
       }
     },
-    "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.BL\\University.BL.csproj": {
+    "C:\\workspace-xamarin\\Movil_II\\University\\University.BL\\University.BL.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.BL\\University.BL.csproj",
+        "projectUniqueName": "C:\\workspace-xamarin\\Movil_II\\University\\University.BL\\University.BL.csproj",
         "projectName": "University.BL",
-        "projectPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.BL\\University.BL.csproj"
+        "projectPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.BL\\University.BL.csproj"
       },
       "frameworks": {
         "net472": {}

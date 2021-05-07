@@ -1146,11 +1146,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App.iOS\\University.App.iOS.csproj",
+      "projectUniqueName": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App.iOS\\University.App.iOS.csproj",
       "projectName": "University.App.iOS",
-      "projectPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App.iOS\\University.App.iOS.csproj",
+      "projectPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App.iOS\\University.App.iOS.csproj",
       "packagesPath": "C:\\Users\\Ronaldo Jimenez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App.iOS\\obj\\",
+      "outputPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1171,8 +1171,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App\\University.App.csproj": {
-              "projectPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App\\University.App.csproj"
+            "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App\\University.App.csproj": {
+              "projectPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App\\University.App.csproj"
             }
           }
         }

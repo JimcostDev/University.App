@@ -652,11 +652,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App\\University.App.csproj",
+      "projectUniqueName": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App\\University.App.csproj",
       "projectName": "University.App",
-      "projectPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App\\University.App.csproj",
+      "projectPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App\\University.App.csproj",
       "packagesPath": "C:\\Users\\Ronaldo Jimenez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.App\\University.App\\obj\\",
+      "outputPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.App\\University.App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -677,8 +677,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.BL\\University.BL.csproj": {
-              "projectPath": "C:\\Users\\Ronaldo Jimenez\\Desktop\\Cursos\\Utap\\Semestre_VI\\Movil_II\\University\\University.BL\\University.BL.csproj"
+            "C:\\workspace-xamarin\\Movil_II\\University\\University.BL\\University.BL.csproj": {
+              "projectPath": "C:\\workspace-xamarin\\Movil_II\\University\\University.BL\\University.BL.csproj"
             }
           }
         }
