@@ -9,6 +9,7 @@ namespace University.App.ViewModels
     public class MainViewModel
     {        
         public LoginViewModel Login { get; set; }    
+        public RegisterViewModel Register { get; set; }    
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
 
         #region Constructors

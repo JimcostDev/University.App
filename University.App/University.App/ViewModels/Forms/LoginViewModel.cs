@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using University.App.Views.Forms;
 using University.App.Views.Menu;
 using University.BL.Services.Implements;
 using Xamarin.Forms;
@@ -49,6 +50,7 @@ namespace University.App.ViewModels.Forms
         #region Commands
         //Eventos
         public Command LoginCommand { get; set; }
+        public Command RegisterCommand { get; set; }
         #endregion
 
         #region Methods
@@ -85,6 +87,19 @@ namespace University.App.ViewModels.Forms
                 await Application.Current.MainPage.DisplayAlert("Notification", ex.Message, "Accept");
             }
         }
+        async void Register()
+        {
+            this.IsRunning = true;
+            this.IsEnabled = false;
+            if (!await _apiService.CheckConnection())
+            {
+                this.IsRunning = false;
+                this.IsEnabled = true;
+                await Application.Current.MainPage.DisplayAlert("Notification", "No internet connection", "Accept");
+                return;
+            }
+            Application.Current.MainPage = new NavigationPage(new RegisterPage());
+        }
         #endregion
 
         #region Constructor
@@ -94,6 +109,7 @@ namespace University.App.ViewModels.Forms
             this.IsRunning = false;
 
             this.LoginCommand = new Command(Login);
+            this.RegisterCommand = new Command(Register);
             this._apiService = new ApiService();
         }
         #endregion

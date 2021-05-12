@@ -58,3 +58,4 @@ C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.pdb
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\Themes\LightTheme.xaml.g.cs
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\Views\Styles.xaml.g.cs
+C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\Views\Forms\RegisterPage.xaml.g.cs
