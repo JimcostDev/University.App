@@ -15,7 +15,9 @@ namespace University.App.ViewModels
         public MainViewModel()
         {
             instance = this;
-            this.LoadMenu();            
+            this.LoadMenu();
+
+            this.Login = new LoginViewModel();
         }
         #endregion
 

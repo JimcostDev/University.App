@@ -661,3 +661,11 @@ C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\o
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\android\src\crc643de17b00c6db0ef9\BorderlessEntryRenderer.java
+C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\bin\Debug\University.BL.dll
+C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\bin\Debug\Newtonsoft.Json.dll
+C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\bin\Debug\University.BL.pdb
+C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\bin\Debug\Newtonsoft.Json.xml
+C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\android\assets\University.BL.dll
+C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\android\assets\University.BL.dll.mdb
+C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\bin\Debug\University.BL.dll.mdb

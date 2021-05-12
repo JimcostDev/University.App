@@ -1,4 +1,5 @@
 ﻿using System;
+using University.App.Views.Forms;
 using University.App.Views.Menu;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,7 +13,7 @@ namespace University.App
         {
             InitializeComponent();
 
-            MainPage = new MasterPage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()
