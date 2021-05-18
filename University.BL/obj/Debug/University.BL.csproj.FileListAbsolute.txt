@@ -13,3 +13,18 @@ C:\Users\Ronaldo Jimenez\Desktop\Cursos\Utap\Semestre_VI\Movil_II\University\Uni
 C:\Users\Ronaldo Jimenez\Desktop\Cursos\Utap\Semestre_VI\Movil_II\University\University.BL\obj\Debug\University.BL.csproj.CopyComplete
 C:\Users\Ronaldo Jimenez\Desktop\Cursos\Utap\Semestre_VI\Movil_II\University\University.BL\obj\Debug\University.BL.dll
 C:\Users\Ronaldo Jimenez\Desktop\Cursos\Utap\Semestre_VI\Movil_II\University\University.BL\obj\Debug\University.BL.pdb
+C:\workspace-xamarin\Movil_II\University\University.BL\bin\Debug\University.BL.dll
+C:\workspace-xamarin\Movil_II\University\University.BL\bin\Debug\University.BL.pdb
+C:\workspace-xamarin\Movil_II\University\University.BL\bin\Debug\Newtonsoft.Json.dll
+C:\workspace-xamarin\Movil_II\University\University.BL\bin\Debug\Plugin.Connectivity.Abstractions.dll
+C:\workspace-xamarin\Movil_II\University\University.BL\bin\Debug\Plugin.Connectivity.dll
+C:\workspace-xamarin\Movil_II\University\University.BL\bin\Debug\Newtonsoft.Json.xml
+C:\workspace-xamarin\Movil_II\University\University.BL\bin\Debug\Plugin.Connectivity.pdb
+C:\workspace-xamarin\Movil_II\University\University.BL\bin\Debug\Plugin.Connectivity.xml
+C:\workspace-xamarin\Movil_II\University\University.BL\bin\Debug\Plugin.Connectivity.Abstractions.pdb
+C:\workspace-xamarin\Movil_II\University\University.BL\bin\Debug\Plugin.Connectivity.Abstractions.xml
+C:\workspace-xamarin\Movil_II\University\University.BL\obj\Debug\University.BL.csprojAssemblyReference.cache
+C:\workspace-xamarin\Movil_II\University\University.BL\obj\Debug\University.BL.csproj.CoreCompileInputs.cache
+C:\workspace-xamarin\Movil_II\University\University.BL\obj\Debug\University.BL.csproj.CopyComplete
+C:\workspace-xamarin\Movil_II\University\University.BL\obj\Debug\University.BL.dll
+C:\workspace-xamarin\Movil_II\University\University.BL\obj\Debug\University.BL.pdb

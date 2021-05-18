@@ -19,6 +19,7 @@ namespace University.App.ViewModels
             this.LoadMenu();
 
             this.Login = new LoginViewModel();
+            this.Register = new RegisterViewModel();
         }
         #endregion
 

@@ -31,6 +31,7 @@
                         <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
                     </Grid.RowDefinitions>
 
                     <Label Text="University"
@@ -73,7 +74,15 @@
                             Text="Register"
                             Style="{StaticResource ButtonStyle}"
                             Command="{Binding RegisterCommand}"
-                            IsEnabled="{Binding IsEnable}"/>
+                            IsEnabled="{Binding IsEnabled}"/>
+
+                    <Button Grid.Row="6"
+                            Margin="0.16"
+                            Text="Back"
+                            TextTransform="None"
+                            Style="{StaticResource LinkStyle}"
+                            Command="{Binding BackCommand}"
+                            IsEnabled="{Binding IsEnabled}"/>
                 </Grid>
                 <ActivityIndicator VerticalOptions="Center"
                                    IsRunning="{Binding IsRunning}"/>

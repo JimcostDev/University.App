@@ -131,3 +131,13 @@ C:\workspace-xamarin\Movil_II\University\University.Auth\bin\System.Web.Http.Web
 C:\workspace-xamarin\Movil_II\University\University.Auth\bin\System.Net.Http.Formatting.xml
 C:\workspace-xamarin\Movil_II\University\University.Auth\bin\System.Web.Http.xml
 C:\workspace-xamarin\Movil_II\University\University.Auth\bin\System.Web.Http.WebHost.xml
+C:\workspace-xamarin\Movil_II\University\University.Auth\bin\System.Web.Http.Owin.dll
+C:\workspace-xamarin\Movil_II\University\University.Auth\bin\University.BL.dll
+C:\workspace-xamarin\Movil_II\University\University.Auth\bin\Plugin.Connectivity.dll
+C:\workspace-xamarin\Movil_II\University\University.Auth\bin\Plugin.Connectivity.Abstractions.dll
+C:\workspace-xamarin\Movil_II\University\University.Auth\bin\University.BL.pdb
+C:\workspace-xamarin\Movil_II\University\University.Auth\bin\System.Web.Http.Owin.xml
+C:\workspace-xamarin\Movil_II\University\University.Auth\bin\Plugin.Connectivity.pdb
+C:\workspace-xamarin\Movil_II\University\University.Auth\bin\Plugin.Connectivity.xml
+C:\workspace-xamarin\Movil_II\University\University.Auth\bin\Plugin.Connectivity.Abstractions.pdb
+C:\workspace-xamarin\Movil_II\University\University.Auth\bin\Plugin.Connectivity.Abstractions.xml

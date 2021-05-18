@@ -48,7 +48,8 @@ namespace University.BL.Services.Implements
         public async Task<ResponseDTO> RequestAPI<T>(string urlBase,
             string prefix,
             object data,
-            Method method)
+            Method method,
+            bool auth = false)
         {
             try
             {
@@ -74,7 +75,17 @@ namespace University.BL.Services.Implements
                 string responseText = await response.Content.ReadAsStringAsync();
 
                 if (response.IsSuccessStatusCode)
+                {
+                    if (auth)
+                    {
+                        var responseDTO = JsonConvert.DeserializeObject<ResponseDTO>(responseText);
+                        if (responseDTO.Data != null)
+                            responseDTO.Data = JsonConvert.DeserializeObject<T>(responseDTO.Data.ToString());
+                        return responseDTO;
+                    }
                     return new ResponseDTO { Code = (int)response.StatusCode, Data = JsonConvert.DeserializeObject<T>(responseText) };
+                }
+                    
                 else
                     return new ResponseDTO { Code = (int)response.StatusCode, Message = responseText };
             }

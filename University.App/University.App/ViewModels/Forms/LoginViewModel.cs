@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using University.App.Views.Forms;
 using University.App.Views.Menu;
+using University.BL.DTOs;
 using University.BL.Services.Implements;
 using Xamarin.Forms;
 
@@ -75,7 +76,25 @@ namespace University.App.ViewModels.Forms
                     return;
                 }
 
-                Application.Current.MainPage = new MasterPage();
+                var loginDTO = new LoginDTO
+                {
+                    Email = this.Email,
+                    Password = this.Password
+                };
+
+                var responseDTO = await _apiService.RequestAPI<UserDTO>(Helpers.Endpoints.URL_BASE_UNIVERSITY_AUTH,
+                    Helpers.Endpoints.LOGIN,
+                    loginDTO,
+                    ApiService.Method.Post,
+                    true);
+
+                if (responseDTO.Code == 200)
+                {
+                    var user = (UserDTO)responseDTO.Data;
+                    Application.Current.MainPage = new MasterPage();
+                }
+                else
+                    await Application.Current.MainPage.DisplayAlert("Notification", responseDTO.Message, "Accept");
 
                 this.IsRunning = false;
                 this.IsEnabled = true;
@@ -98,7 +117,7 @@ namespace University.App.ViewModels.Forms
                 await Application.Current.MainPage.DisplayAlert("Notification", "No internet connection", "Accept");
                 return;
             }
-            Application.Current.MainPage = new NavigationPage(new RegisterPage());
+            Application.Current.MainPage = new RegisterPage();
         }
         #endregion
 

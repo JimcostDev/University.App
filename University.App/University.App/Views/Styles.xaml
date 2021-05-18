@@ -33,7 +33,7 @@
         <Setter Property="BackgroundColor" Value="{DynamicResource Gray-200}" />
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="BorderWidth" Value="0"/>
-        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="FontSize" Value="12"/>
         <Setter Property="HeightRequest" Value="40"/>
         <Setter Property="CornerRadius" Value="20"/>
         <Setter Property="VerticalOptions" Value="Center"/>

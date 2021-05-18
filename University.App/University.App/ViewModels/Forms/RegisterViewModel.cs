@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using University.App.Views.Forms;
 using University.App.Views.Menu;
+using University.BL.DTOs;
 using University.BL.Services.Implements;
 using Xamarin.Forms;
 
@@ -55,6 +57,7 @@ namespace University.App.ViewModels.Forms
         #region Commands
         //Eventos
         public Command RegisterCommand { get; set; }
+        public Command BackCommand { get; set; }
         #endregion
 
         #region Methods
@@ -80,7 +83,29 @@ namespace University.App.ViewModels.Forms
                     return;
                 }
 
-                Application.Current.MainPage = new MasterPage();
+                var registerDTO = new RegisterDTO
+                {
+                    Email = this.Email,
+                    Password = this.Password,
+                    ConfirmPassword = this.ConfirmPassword
+                };
+
+                var responseDTO = await _apiService.RequestAPI<string>(Helpers.Endpoints.URL_BASE_UNIVERSITY_AUTH,
+                    Helpers.Endpoints.REGISTER,
+                    registerDTO,
+                    ApiService.Method.Post,
+                    true);
+
+                if (responseDTO.Code == 200)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Notification", "Register successfull", "Accept");
+                    Application.Current.MainPage = new LoginPage();
+                    this.IsRunning = false;
+                    this.IsEnabled = true;
+                }
+                else
+                    await Application.Current.MainPage.DisplayAlert("Notification", responseDTO.Message, "Accept");
+         
 
                 this.IsRunning = false;
                 this.IsEnabled = true;
@@ -92,6 +117,12 @@ namespace University.App.ViewModels.Forms
                 await Application.Current.MainPage.DisplayAlert("Notification", ex.Message, "Accept");
             }
         }
+        public void Back()
+        {
+            this.IsRunning = true;
+            this.IsEnabled = false;
+            Application.Current.MainPage = new LoginPage();
+        }
         #endregion
 
         #region Constructor
@@ -101,6 +132,7 @@ namespace University.App.ViewModels.Forms
             this.IsRunning = false;
 
             this.RegisterCommand = new Command(Register);
+            this.BackCommand = new Command(Back);
             this._apiService = new ApiService();
         }
         #endregion

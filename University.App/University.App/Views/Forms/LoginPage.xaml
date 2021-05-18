@@ -65,14 +65,15 @@
                             Text="Login"
                             Style="{StaticResource ButtonStyle}"
                             Command="{Binding LoginCommand}"
-                            IsEnabled="{Binding IsEnable}"/>
+                            IsEnabled="{Binding IsEnabled}"/>
 
                     <Button Grid.Row="5"
                             Margin="0.16"
                             Text="Register"
+                            TextTransform="None"
                             Style="{StaticResource LinkStyle}"
                             Command="{Binding RegisterCommand}"
-                            IsEnabled="{Binding IsEnable}"/>
+                            IsEnabled="{Binding IsEnabled}"/>
                     
                 </Grid>
                 <ActivityIndicator VerticalOptions="Center"
