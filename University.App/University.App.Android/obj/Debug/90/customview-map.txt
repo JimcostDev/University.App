@@ -24,6 +24,7 @@ cache-path;C:\workspace-xamarin\Movil_II\University\University.App\University.Ap
 color;obj\Debug\90\res\values\colors.xml
 declare-styleable;C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
 external-cache-path;C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-files-path;obj\Debug\90\res\xml\file_paths.xml
 external-path;C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
@@ -31,6 +32,7 @@ FrameLayout;C:\workspace-xamarin\Movil_II\University\University.App\University.A
 item;C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
 LinearLayout;C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
 paths;C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+paths;obj\Debug\90\res\xml\file_paths.xml
 resources;C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
 resources;C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\lp\40\jl\res\values\strings.xml
 resources;C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml

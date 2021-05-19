@@ -91,6 +91,7 @@ namespace University.App.ViewModels.Forms
                 if (responseDTO.Code == 200)
                 {
                     var user = (UserDTO)responseDTO.Data;
+                    Helpers.Settings.UserID = user.Id;
                     Application.Current.MainPage = new MasterPage();
                 }
                 else
@@ -118,6 +119,8 @@ namespace University.App.ViewModels.Forms
                 return;
             }
             Application.Current.MainPage = new RegisterPage();
+            this.IsRunning = false;
+            this.IsEnabled = true;
         }
         #endregion
 

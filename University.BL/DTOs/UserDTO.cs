@@ -9,6 +9,7 @@ namespace University.BL.DTOs
     public class UserDTO
     {
         public string Email { get; set; }
+        public string Id { get; set; }
         public bool EmailConfirmed { get; set; }
         public string PasswordHash { get; set; }
         public string SecurityStamp { get; set; }

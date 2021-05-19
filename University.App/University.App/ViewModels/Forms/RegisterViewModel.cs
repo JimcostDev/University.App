@@ -122,6 +122,8 @@ namespace University.App.ViewModels.Forms
             this.IsRunning = true;
             this.IsEnabled = false;
             Application.Current.MainPage = new LoginPage();
+            this.IsRunning = false;
+            this.IsEnabled = true;
         }
         #endregion
 
