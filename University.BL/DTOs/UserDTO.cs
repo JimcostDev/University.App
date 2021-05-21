@@ -17,6 +17,8 @@ namespace University.BL.DTOs
         public bool PhoneNumberConfirmed { get; set; }
         public bool TwoFactorEnabled { get; set; }
         public DateTime? LockoutEndDateUtc { get; set; }
+        public string Image { get; set; }
+        public string UserName { get; set; }
         public bool LockoutEnabled
         {
             get; set;

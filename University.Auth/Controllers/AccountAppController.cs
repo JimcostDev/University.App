@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity.Owin;
 using System;
+using System.Configuration;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -68,7 +69,15 @@ namespace University.Auth.Controllers
                 {
                     case SignInStatus.Success:
                         var user = await UserManager.FindByEmailAsync(model.Email);
-                        return Ok(new ResponseDTO { Code = 200, Data = user });
+
+                        var userDTO = new UserDTO {
+                            Id = user.Id,
+                            Email = user.Email,
+                            UserName = user.UserName,
+                            Image = ConfigurationManager.AppSettings["UrlBase"] +  user.Id + ".jpg"
+                        };
+
+                        return Ok(new ResponseDTO { Code = 200, Data = userDTO });
                     //case SignInStatus.LockedOut:
                     //case SignInStatus.Failure:
                     default:
@@ -107,6 +116,57 @@ namespace University.Auth.Controllers
             {
                 return Ok(new ResponseDTO { Code = 500, Message = ex.Message });
             }
+        }
+        [HttpPost]
+        [Route("Profile")]
+        public async Task<IHttpActionResult> Profile(ProfileDTO model)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    var fileName = string.Format("{0}.{1}", model.UserID, model.Ext);
+                    var filePath = HttpContext.Current.Server.MapPath("~") + @"\Documents\";
+                    var path = filePath + fileName;
+                    BL.Helpers.Utils.SaveFile(path, model.Image);
+
+                    return Ok(new ResponseDTO { Code = 200 });
+                }
+                return Ok(new ResponseDTO { Code = 400, Message = string.Join(", ", ModelState.Values.SelectMany(x => x.Errors).Select(x => x.ErrorMessage)) });
+            }
+            catch (Exception ex)
+            {
+                return Ok(new ResponseDTO { Code = 500, Message = ex.Message });
+            }
+
+        }
+
+        [HttpGet]
+        [Route("GetUser")]
+        public async Task<IHttpActionResult> GetUser(string  userID)
+        {
+            try
+            {
+                var user = await UserManager.FindByIdAsync(userID);
+                if (user != null)
+                {
+                    var userDTO = new UserDTO
+                    {
+                        Id = user.Id,
+                        Email = user.Email,
+                        UserName = user.UserName,
+                        Image = ConfigurationManager.AppSettings["UrlBase"] + user.Id + ".jpg"
+                    };
+
+                    return Ok(new ResponseDTO { Code = 200, Data = userDTO });
+                }else
+                    return Ok(new ResponseDTO { Code = 404, Message = "Not Found" });
+            }
+            catch (Exception ex)
+            {
+                return Ok(new ResponseDTO { Code = 500, Message = ex.Message });
+            }
+
         }
     }
 }

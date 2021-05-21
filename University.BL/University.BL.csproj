@@ -53,6 +53,7 @@
     <Compile Include="DTOs\AccountDTO.cs" />
     <Compile Include="DTOs\ResponseDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
+    <Compile Include="Helpers\Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Implements\ApiService.cs" />
   </ItemGroup>

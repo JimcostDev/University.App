@@ -18,4 +18,11 @@ namespace University.BL.DTOs
         public string ConfirmPassword { get; set; }
 
     }
+    public class ProfileDTO
+    {
+        public string UserID { get; set; }
+        public string Image { get; set; }
+        public string Ext { get; set; }
+
+    }
 }

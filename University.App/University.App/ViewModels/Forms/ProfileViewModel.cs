@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using University.BL.DTOs;
+using University.BL.Services.Implements;
 using Xamarin.Forms;
 
 namespace University.App.ViewModels.Forms
@@ -13,11 +14,13 @@ namespace University.App.ViewModels.Forms
         #region Attributes
         private MediaFile _file;
         private UserDTO _user;
+        private ApiService _apiService;
         #endregion
 
         #region Commands
         public Command AddImageCommand { get; set; }
         public Command EditProfileCommand { get; set; }
+        public Command GetUserCommand { get; set; }
         #endregion
 
         #region Methods
@@ -27,6 +30,33 @@ namespace University.App.ViewModels.Forms
         {
             this.AddImageCommand = new Command(AddImage);
             this.EditProfileCommand = new Command(EditProfile);
+            this.GetUserCommand = new Command(GetUser);
+            this.GetUserCommand.Execute(null);
+            this._apiService = new ApiService();
+        }
+        async void GetUser()
+        {
+            try
+            {
+                var userID = Helpers.Settings.UserID;
+                var responseDTO = await _apiService.RequestAPI<ResponseDTO>(Helpers.Endpoints.URL_BASE_UNIVERSITY_AUTH,
+                    Helpers.Endpoints.GET_USER + "?userID=" + userID,
+                    null,
+                    ApiService.Method.Get,
+                    true);
+
+                if(responseDTO.Code == 200)
+                {
+                    _user = (UserDTO)responseDTO.Data;
+                }
+                else
+                    await Application.Current.MainPage.DisplayAlert("Notification", responseDTO.Message, "Accept");
+            }
+            catch (Exception ex)
+            {
+
+                await Application.Current.MainPage.DisplayAlert("Notification", ex.Message, "Accept");
+            }
         }
         #endregion
 
