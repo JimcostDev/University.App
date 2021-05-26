@@ -10,6 +10,7 @@ namespace University.App.ViewModels
     {        
         public LoginViewModel Login { get; set; }    
         public RegisterViewModel Register { get; set; }    
+        public ProfileViewModel Profile { get; set; }    
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
 
         #region Constructors
@@ -33,7 +34,13 @@ namespace University.App.ViewModels
                     Icon = "ic_exit_to_app",
                     PageName = "LoginPage",
                     Title = "Log out"
-                }                
+                },
+                new MenuItemViewModel
+                {
+                    Icon = "ic_exit_to_app",
+                    PageName = "ProfilePage",
+                    Title = "Profile"
+                }
             };
         }
         #endregion

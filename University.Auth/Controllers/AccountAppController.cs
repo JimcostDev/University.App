@@ -70,11 +70,13 @@ namespace University.Auth.Controllers
                     case SignInStatus.Success:
                         var user = await UserManager.FindByEmailAsync(model.Email);
 
+                        var fileName = string.Format("{0}.{1}", user.Id, "jpg");
+                        var filePath = ConfigurationManager.AppSettings["UrlBase"] + @"/Documents/";
                         var userDTO = new UserDTO {
                             Id = user.Id,
                             Email = user.Email,
                             UserName = user.UserName,
-                            Image = ConfigurationManager.AppSettings["UrlBase"] +  user.Id + ".jpg"
+                            Image = filePath + fileName
                         };
 
                         return Ok(new ResponseDTO { Code = 200, Data = userDTO });
@@ -150,12 +152,18 @@ namespace University.Auth.Controllers
                 var user = await UserManager.FindByIdAsync(userID);
                 if (user != null)
                 {
+                    var fileName = string.Format("{0}.{1}", user.Id, "jpg");
+                    var filePath = ConfigurationManager.AppSettings["UrlBase"] + @"/Documents/";
+
+                    var path = HttpContext.Current.Server.MapPath("~") + @"\Documents\" + fileName;
+                    var ifExistFile = BL.Helpers.Utils.IfExistFile(path);
+
                     var userDTO = new UserDTO
                     {
                         Id = user.Id,
                         Email = user.Email,
                         UserName = user.UserName,
-                        Image = ConfigurationManager.AppSettings["UrlBase"] + user.Id + ".jpg"
+                        Image = ifExistFile ? filePath + fileName : string.Empty
                     };
 
                     return Ok(new ResponseDTO { Code = 200, Data = userDTO });

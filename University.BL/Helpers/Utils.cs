@@ -20,5 +20,13 @@ namespace University.BL.Helpers
             file.Write(tempBytes, 0, tempBytes.Length);
             file.Close();
         }
+        public static bool IfExistFile(string path)
+        {
+            if (File.Exists(path))
+                return true;
+
+            return false;
+        }
     }
 }
+

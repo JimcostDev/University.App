@@ -677,3 +677,4 @@ C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\o
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\android\assets\Plugin.Settings.dll
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\android\assets\Plugin.Settings.dll.mdb
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\android\src\crc646957603ea1820544\MediaPickerActivity.java
+C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\res\drawable\profile.png

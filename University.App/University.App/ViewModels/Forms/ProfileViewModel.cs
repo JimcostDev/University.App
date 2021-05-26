@@ -12,9 +12,23 @@ namespace University.App.ViewModels.Forms
     public class ProfileViewModel : BaseViewModel
     {
         #region Attributes
+        private ApiService _apiService;
         private MediaFile _file;
         private UserDTO _user;
-        private ApiService _apiService;
+        private ImageSource _imageSource;
+        #endregion
+
+        #region Properties
+        public UserDTO User
+        {
+            get { return this._user; }
+            set { this.SetValue(ref this._user, value); }
+        }
+        public ImageSource ImageSource
+        {
+            get { return this._imageSource; }
+            set { this.SetValue(ref this._imageSource, value); }
+        }
         #endregion
 
         #region Commands
@@ -28,18 +42,19 @@ namespace University.App.ViewModels.Forms
         #region Constructor
         public ProfileViewModel()
         {
+            this._apiService = new ApiService();
             this.AddImageCommand = new Command(AddImage);
             this.EditProfileCommand = new Command(EditProfile);
             this.GetUserCommand = new Command(GetUser);
-            this.GetUserCommand.Execute(null);
-            this._apiService = new ApiService();
+            this.GetUserCommand.Execute(null); 
+            
         }
         async void GetUser()
         {
             try
             {
                 var userID = Helpers.Settings.UserID;
-                var responseDTO = await _apiService.RequestAPI<ResponseDTO>(Helpers.Endpoints.URL_BASE_UNIVERSITY_AUTH,
+                var responseDTO = await _apiService.RequestAPI<UserDTO>(Helpers.Endpoints.URL_BASE_UNIVERSITY_AUTH,
                     Helpers.Endpoints.GET_USER + "?userID=" + userID,
                     null,
                     ApiService.Method.Get,
@@ -47,7 +62,8 @@ namespace University.App.ViewModels.Forms
 
                 if(responseDTO.Code == 200)
                 {
-                    _user = (UserDTO)responseDTO.Data;
+                    User = (UserDTO)responseDTO.Data;
+                    this.ImageSource = string.IsNullOrEmpty(User.Image) ? "profile" : User.Image;
                 }
                 else
                     await Application.Current.MainPage.DisplayAlert("Notification", responseDTO.Message, "Accept");
@@ -70,6 +86,25 @@ namespace University.App.ViewModels.Forms
                     var imageArray = Helpers.FileHelper.ReadFully(this._file.GetStream());
                     imageBase64 = Convert.ToBase64String(imageArray);
                 }
+                var userID = Helpers.Settings.UserID;
+                var profileDTO = new ProfileDTO
+                {
+                    UserID = userID,
+                    Image = imageBase64,
+                    Ext = "jpg"
+                };
+
+
+                var responseDTO = await _apiService.RequestAPI<ResponseDTO>(Helpers.Endpoints.URL_BASE_UNIVERSITY_AUTH,
+                    Helpers.Endpoints.PROFILE,
+                    profileDTO,
+                    ApiService.Method.Post,
+                    true);
+
+                if (responseDTO.Code == 200)
+                    await Application.Current.MainPage.DisplayAlert("Notification", "The process is successfull", "Accept");
+                else
+                    await Application.Current.MainPage.DisplayAlert("Notification", responseDTO.Message, "Accept");
             }
             catch (Exception ex)
             {
@@ -105,7 +140,12 @@ namespace University.App.ViewModels.Forms
                 {
                     this._file = await CrossMedia.Current.PickPhotoAsync();
                 }
-                    
+                if(this._file != null)
+                    this.ImageSource = ImageSource.FromStream(()=>
+                    {
+                        var stream = _file.GetStream();
+                        return stream;
+                    });
             }
             catch (Exception ex)
             {

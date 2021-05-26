@@ -39,10 +39,10 @@ namespace University.App.ViewModels.Menu
                 MainViewModel.GetInstance().Register = new RegisterViewModel();
                 Application.Current.MainPage = new NavigationPage(new RegisterPage());
             }
-            else if (this.PageName.Equals("CoursesPage"))
+            else if (this.PageName.Equals("ProfilePage"))
             {
-				//MainViewModel.GetInstance().Courses = new CoursesViewModel();
-                //await App.Navigator.PushAsync(new Views.Forms.CoursesPage());             
+                MainViewModel.GetInstance().Profile = new ProfileViewModel();
+                await App.Navigator.PushAsync(new ProfilePage());
             }
         }
         #endregion
