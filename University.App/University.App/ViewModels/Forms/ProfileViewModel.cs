@@ -2,6 +2,7 @@
 using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using University.BL.DTOs;
 using University.BL.Services.Implements;
@@ -46,8 +47,8 @@ namespace University.App.ViewModels.Forms
             this.AddImageCommand = new Command(AddImage);
             this.EditProfileCommand = new Command(EditProfile);
             this.GetUserCommand = new Command(GetUser);
-            this.GetUserCommand.Execute(null); 
-            
+            this.GetUserCommand.Execute(null);
+
         }
         async void GetUser()
         {
@@ -60,10 +61,18 @@ namespace University.App.ViewModels.Forms
                     ApiService.Method.Get,
                     true);
 
-                if(responseDTO.Code == 200)
+                if (responseDTO.Code == 200)
                 {
-                    User = (UserDTO)responseDTO.Data;
-                    this.ImageSource = string.IsNullOrEmpty(User.Image) ? "profile" : User.Image;
+                    this.User = (UserDTO)responseDTO.Data;
+                    this.ImageSource = "profile";
+                    if (!string.IsNullOrEmpty(this.User.Image))
+                    {
+                        this.ImageSource = ImageSource.FromStream(() =>
+                        {
+                            var byteArray = Convert.FromBase64String(this.User.ImageBase64);
+                            return new MemoryStream(byteArray);
+                        });
+                    }
                 }
                 else
                     await Application.Current.MainPage.DisplayAlert("Notification", responseDTO.Message, "Accept");
@@ -81,7 +90,7 @@ namespace University.App.ViewModels.Forms
             try
             {
                 var imageBase64 = string.Empty;
-                if(this._file != null)
+                if (this._file != null)
                 {
                     var imageArray = Helpers.FileHelper.ReadFully(this._file.GetStream());
                     imageBase64 = Convert.ToBase64String(imageArray);
@@ -127,7 +136,8 @@ namespace University.App.ViewModels.Forms
                 {
                     this._file = null;
                     return;
-                } else if (source.Equals("Take a new picture"))
+                }
+                else if (source.Equals("Take a new picture"))
                 {
                     this._file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
                     {
@@ -140,8 +150,8 @@ namespace University.App.ViewModels.Forms
                 {
                     this._file = await CrossMedia.Current.PickPhotoAsync();
                 }
-                if(this._file != null)
-                    this.ImageSource = ImageSource.FromStream(()=>
+                if (this._file != null)
+                    this.ImageSource = ImageSource.FromStream(() =>
                     {
                         var stream = _file.GetStream();
                         return stream;
@@ -154,6 +164,6 @@ namespace University.App.ViewModels.Forms
         }
         #endregion
 
-        
+
     }
 }

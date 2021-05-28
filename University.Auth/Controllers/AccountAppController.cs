@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -163,7 +164,8 @@ namespace University.Auth.Controllers
                         Id = user.Id,
                         Email = user.Email,
                         UserName = user.UserName,
-                        Image = ifExistFile ? filePath + fileName : string.Empty
+                        Image = ifExistFile ? filePath + fileName : string.Empty,
+                        ImageBase64 = ifExistFile ? Convert.ToBase64String(File.ReadAllBytes(path)) : string.Empty
                     };
 
                     return Ok(new ResponseDTO { Code = 200, Data = userDTO });

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
+using System.Text.RegularExpressions;
 using University.App.Views.Forms;
 using University.App.Views.Menu;
 using University.BL.DTOs;
@@ -21,8 +23,8 @@ namespace University.App.ViewModels.Forms
         #endregion
 
         #region Properties
-        public string Email 
-        { 
+        public string Email
+        {
             get { return this._email; }
             set { this.SetValue(ref this._email, value); }
         }
@@ -55,9 +57,59 @@ namespace University.App.ViewModels.Forms
         #endregion
 
         #region Methods
-        async void Login() {
+        public static bool IsValidEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
             try
             {
+                // Normalize the domain
+                email = Regex.Replace(email, @"(@)(.+)$", DomainMapper,
+                                      RegexOptions.None, TimeSpan.FromMilliseconds(200));
+
+                // Examines the domain part of the email and normalizes it.
+                string DomainMapper(Match match)
+                {
+                    // Use IdnMapping class to convert Unicode domain names.
+                    var idn = new IdnMapping();
+
+                    // Pull out and process domain name (throws ArgumentException on invalid)
+                    string domainName = idn.GetAscii(match.Groups[2].Value);
+
+                    return match.Groups[1].Value + domainName;
+                }
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
+            }
+            catch (ArgumentException)
+            {
+                return false;
+            }
+
+            try
+            {
+                return Regex.IsMatch(email,
+                    @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+                    RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
+            }
+        }
+        async void Login()
+        {
+            try
+            {
+
+                this.IsEmailValid = IsValidEmail(this.Email);
+                if (!this.IsEmailValid)
+                    return;
+
+
                 this.IsRunning = true;
                 this.IsEnabled = false;
                 if (!await _apiService.CheckConnection())
@@ -68,7 +120,7 @@ namespace University.App.ViewModels.Forms
                     return;
                 }
 
-                if (string.IsNullOrEmpty(this.Email) || string.IsNullOrEmpty(this.Password)) 
+                if (string.IsNullOrEmpty(this.Email) || string.IsNullOrEmpty(this.Password))
                 {
                     this.IsRunning = false;
                     this.IsEnabled = true;

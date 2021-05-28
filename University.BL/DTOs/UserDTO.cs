@@ -19,6 +19,7 @@ namespace University.BL.DTOs
         public DateTime? LockoutEndDateUtc { get; set; }
         public string Image { get; set; }
         public string UserName { get; set; }
+        public string ImageBase64 { get; set; }
         public bool LockoutEnabled
         {
             get; set;

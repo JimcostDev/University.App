@@ -50,7 +50,17 @@
                            PlaceholderColor="{DynamicResource Gray-700}"
                                              TextColor="{DynamicResource Gray-600}"
                                              Style="{StaticResource EntryStyle}"
-                                             Text="{Binding Email}"/>
+                                             Text="{Binding Email}">
+                        <control:BorderlessEntry.Triggers>
+                            <DataTrigger Binding="{Binding IsEmailValid}"
+                                         TargetType="control:BorderlessEntry"
+                                         Value="False">
+                                <Setter Property="BorderColor" Value="Red"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                            </DataTrigger>
+                        </control:BorderlessEntry.Triggers>
+                    </control:BorderlessEntry>
+
 
                     <control:BorderlessEntry Grid.Row="3"
                            Placeholder="Password"
