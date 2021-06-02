@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
+using University.App.Helpers;
 using University.App.Views.Forms;
 using University.App.Views.Menu;
 using University.BL.DTOs;
@@ -116,7 +117,7 @@ namespace University.App.ViewModels.Forms
                 {
                     this.IsRunning = false;
                     this.IsEnabled = true;
-                    await Application.Current.MainPage.DisplayAlert("Notification", "No internet connection", "Accept");
+                    await Application.Current.MainPage.DisplayAlert(Languages.Notification, Languages.NoInternetConnection, Languages.Accept);
                     return;
                 }
 
@@ -124,7 +125,7 @@ namespace University.App.ViewModels.Forms
                 {
                     this.IsRunning = false;
                     this.IsEnabled = true;
-                    await Application.Current.MainPage.DisplayAlert("Notification", "The fields are required", "Accept");
+                    await Application.Current.MainPage.DisplayAlert(Languages.Notification, Languages.FieldsRequired, Languages.Accept);
                     return;
                 }
 
@@ -134,7 +135,7 @@ namespace University.App.ViewModels.Forms
                     Password = this.Password
                 };
 
-                var responseDTO = await _apiService.RequestAPI<UserDTO>(Helpers.Endpoints.URL_BASE_UNIVERSITY_AUTH,
+                var responseDTO = await _apiService.RequestAPI<UserDTO>(Endpoints.URL_BASE_UNIVERSITY_AUTH,
                     Helpers.Endpoints.LOGIN,
                     loginDTO,
                     ApiService.Method.Post,
@@ -147,7 +148,7 @@ namespace University.App.ViewModels.Forms
                     Application.Current.MainPage = new MasterPage();
                 }
                 else
-                    await Application.Current.MainPage.DisplayAlert("Notification", responseDTO.Message, "Accept");
+                    await Application.Current.MainPage.DisplayAlert(Languages.Notification, responseDTO.Message, Languages.Accept);
 
                 this.IsRunning = false;
                 this.IsEnabled = true;
@@ -156,7 +157,7 @@ namespace University.App.ViewModels.Forms
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;
-                await Application.Current.MainPage.DisplayAlert("Notification", ex.Message, "Accept");
+                await Application.Current.MainPage.DisplayAlert(Languages.Notification, ex.Message, Languages.Accept);
             }
         }
         async void Register()
@@ -167,7 +168,7 @@ namespace University.App.ViewModels.Forms
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;
-                await Application.Current.MainPage.DisplayAlert("Notification", "No internet connection", "Accept");
+                await Application.Current.MainPage.DisplayAlert(Languages.Notification, Languages.NoInternetConnection, Languages.Accept);
                 return;
             }
             Application.Current.MainPage = new RegisterPage();

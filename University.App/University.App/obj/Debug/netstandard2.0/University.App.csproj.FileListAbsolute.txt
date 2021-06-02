@@ -60,3 +60,11 @@ C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\ref\University.App.dll
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.pdb
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\Views\Forms\ProfilePage.xaml.g.cs
+C:\workspace-xamarin\Movil_II\University\University.App\University.App\bin\Debug\netstandard2.0\es\University.App.resources.dll
+C:\workspace-xamarin\Movil_II\University\University.App\University.App\bin\Debug\netstandard2.0\ja\University.App.resources.dll
+C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.Resources.Resource.resources
+C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.Resources.Resource.es.resources
+C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.Resources.Resource.ja.resources
+C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.csproj.GenerateResource.cache
+C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\es\University.App.resources.dll
+C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\ja\University.App.resources.dll

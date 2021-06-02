@@ -4,6 +4,7 @@
              x:Class="University.App.Views.Forms.LoginPage"
              NavigationPage.HasNavigationBar="False"
              xmlns:control="clr-namespace:University.App.Controls"
+             xmlns:i18n="clr-namespace:University.App.Helpers"
              BackgroundColor="{DynamicResource Gray-200}"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Resources>
@@ -41,7 +42,7 @@
                     <Label Grid.Row="1" 
                            Margin="0.8"
                            HorizontalTextAlignment="Center"
-                           Text="Login or register from here to access."
+                           Text="{i18n:Translate LoginPageLoginMember}"
                             Style="{StaticResource LabelStyle}"/>
 
                     <control:BorderlessEntry Grid.Row="2"
@@ -72,14 +73,14 @@
 
                     <Button Grid.Row="4"
                             Margin="0.16"
-                            Text="Login"
+                            Text="{i18n:Translate Login}"
                             Style="{StaticResource ButtonStyle}"
                             Command="{Binding LoginCommand}"
                             IsEnabled="{Binding IsEnabled}"/>
 
                     <Button Grid.Row="5"
                             Margin="0.16"
-                            Text="Register"
+                            Text="{i18n:Translate LoginPageDontHaveAccount}"
                             TextTransform="None"
                             Style="{StaticResource LinkStyle}"
                             Command="{Binding RegisterCommand}"

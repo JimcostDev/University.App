@@ -18,6 +18,14 @@
         },
         "runtime": {
           "University.App.dll": {}
+        },
+        "resources": {
+          "es/University.App.resources.dll": {
+            "locale": "es"
+          },
+          "ja/University.App.resources.dll": {
+            "locale": "ja"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
