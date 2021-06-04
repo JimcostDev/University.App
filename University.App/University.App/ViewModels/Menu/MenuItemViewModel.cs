@@ -44,6 +44,16 @@ namespace University.App.ViewModels.Menu
                 MainViewModel.GetInstance().Profile = new ProfileViewModel();
                 await App.Navigator.PushAsync(new ProfilePage());
             }
+            else if (this.PageName.Equals("AboutPage"))
+            {
+                MainViewModel.GetInstance().About = new AboutViewModel();
+                await App.Navigator.PushAsync(new AboutPage());
+            }
+            else if (this.PageName.Equals("PQRSPage"))
+            {
+                MainViewModel.GetInstance().PQRS = new PQRSViewModel();
+                await App.Navigator.PushAsync(new PQRSPage());
+            }
         }
         #endregion
     }

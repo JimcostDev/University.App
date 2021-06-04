@@ -177,6 +177,27 @@ namespace University.Auth.Controllers
                 return Ok(new ResponseDTO { Code = 500, Message = ex.Message });
             }
 
+
+        }
+        [HttpPost]
+        [Route("ChangePassword")]
+        public async Task<IHttpActionResult> ChangePassword(ChangePasswordDTO model)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    return Ok(new ResponseDTO { Code = 400, Message = string.Join(", ", ModelState.Values.SelectMany(x => x.Errors).Select(x => x.ErrorMessage)) });
+
+                var result = await UserManager.ChangePasswordAsync(model.UserId, model.OldPassword, model.NewPassword);
+                if (result.Succeeded)
+                    return Ok(new ResponseDTO { Code = 200 });
+
+                return Ok(new ResponseDTO { Code = 500, Message = string.Join(", ", result.Errors.Select(x => x)) });
+            }
+            catch (Exception ex)
+            {
+                return Ok(new ResponseDTO { Code = 500, Message = ex.Message });
+            }
         }
     }
 }

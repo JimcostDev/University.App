@@ -41,6 +41,7 @@
       <HintPath>..\packages\Xam.Plugin.Connectivity.3.2.0\lib\net45\Plugin.Connectivity.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTOs\AccountDTO.cs" />
+    <Compile Include="DTOs\ManageDTO.cs" />
     <Compile Include="DTOs\ResponseDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Helpers\Utils.cs" />
