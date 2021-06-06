@@ -660,7 +660,6 @@ C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\b
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\android\assets\University.BL.dll
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\android\assets\University.BL.dll.mdb
-C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\bin\Debug\University.BL.dll.mdb
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\lp\15\jl\files.cache
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\lp\16\jl\files.cache
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.Android\obj\Debug\90\lp\22\jl\files.cache

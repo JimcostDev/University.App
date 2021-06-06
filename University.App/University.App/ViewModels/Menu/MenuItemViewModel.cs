@@ -41,7 +41,7 @@ namespace University.App.ViewModels.Menu
             }
             else if (this.PageName.Equals("ChangePasswordPage"))
             {
-                MainViewModel.GetInstance().Register = new ChangePasswordViewModelh();
+                MainViewModel.GetInstance().ChangePassword = new ChangePasswordViewModel();
                 Application.Current.MainPage = new NavigationPage(new ChangePasswordPage());
             }
             else if (this.PageName.Equals("ProfilePage"))

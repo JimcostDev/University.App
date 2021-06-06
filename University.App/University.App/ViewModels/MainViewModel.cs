@@ -13,7 +13,7 @@ namespace University.App.ViewModels
         public ProfileViewModel Profile { get; set; }    
         public AboutViewModel About { get; set; }    
         public PQRSViewModel PQRS { get; set; }    
-        public ChangePasswordViewModelh ChangePassword { get; set; }    
+        public ChangePasswordViewModel ChangePassword { get; set; }    
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
 
         #region Constructors
@@ -24,7 +24,7 @@ namespace University.App.ViewModels
 
             this.Login = new LoginViewModel();
             this.Register = new RegisterViewModel();
-            this.ChangePassword = new ChangePasswordViewModelh();
+            this.ChangePassword = new ChangePasswordViewModel();
         }
         #endregion
 

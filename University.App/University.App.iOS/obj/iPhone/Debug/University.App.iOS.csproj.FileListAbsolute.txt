@@ -126,7 +126,6 @@ C:\workspace-xamarin\Movil_II\University\University.App\University.App.iOS\obj\i
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.iOS\obj\iPhone\Debug\University.App.iOS.csproj.CopyComplete
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.iOS\obj\iPhone\Debug\University.App.iOS.exe
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.iOS\obj\iPhone\Debug\University.App.iOS.pdb
-C:\workspace-xamarin\Movil_II\University\University.App\University.App.iOS\bin\iPhone\Debug\University.BL.dll.mdb
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.iOS\bin\iPhone\Debug\Plugin.Media.dll
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.iOS\bin\iPhone\Debug\Plugin.Media.pdb
 C:\workspace-xamarin\Movil_II\University\University.App\University.App.iOS\bin\iPhone\Debug\Plugin.Settings.Abstractions.dll

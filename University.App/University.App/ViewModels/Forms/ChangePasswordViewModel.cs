@@ -121,9 +121,9 @@ namespace University.App.ViewModels.Forms
                 var userID = Helpers.Settings.UserID;
                 var changePasswordDTO = new ChangePasswordDTO
                 {
-                    UserID = userID,
+                    UserId = userID,
                     OldPassword = this.OldPassword,
-                    Password = this.Password,
+                    NewPassword = this.Password,
                     ConfirmPassword = this.ConfirmPassword
                 };
 
