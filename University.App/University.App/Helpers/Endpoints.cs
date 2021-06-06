@@ -11,5 +11,6 @@ namespace University.App.Helpers
         public static string REGISTER { get; set; } = "api/AccountApp/Register/";
         public static string PROFILE { get; set; } = "api/AccountApp/Profile/";
         public static string GET_USER { get; set; } = "api/AccountApp/GetUser/";
+        public static string CHANGE_PASSWORD { get; set; } = "/api/AccountApp/ChangePassword/";
     }
 }

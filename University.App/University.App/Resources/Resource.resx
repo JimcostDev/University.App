@@ -117,8 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About us</value>
+  </data>
   <data name="Accept" xml:space="preserve">
     <value>Accept</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change password from here to access</value>
+  </data>
+  <data name="ChangePasswordSuccessfully" xml:space="preserve">
+    <value>Change password successfully</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
   </data>
   <data name="FieldsRequired" xml:space="preserve">
     <value>The fields are required</value>
@@ -132,10 +150,58 @@
   <data name="LoginPageLoginMember" xml:space="preserve">
     <value>Login or member from here to access</value>
   </data>
+  <data name="MeetUs" xml:space="preserve">
+    <value>Meet us</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
   <data name="NoInternetConnection" xml:space="preserve">
     <value>No internet connection</value>
   </data>
   <data name="Notification" xml:space="preserve">
     <value>Notification</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>Old password</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="ProcessSuccessfull" xml:space="preserve">
+    <value>The process is successfull</value>
+  </data>
+  <data name="RateOurService" xml:space="preserve">
+    <value>Rate our service</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RegisterPageRegisterMember" xml:space="preserve">
+    <value>Register member from here to access</value>
+  </data>
+  <data name="RegisterSuccessfull" xml:space="preserve">
+    <value>Register successfull</value>
+  </data>
+  <data name="SeeMore" xml:space="preserve">
+    <value>See more</value>
+  </data>
+  <data name="SelectTypeRequest" xml:space="preserve">
+    <value>Select type of request</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="TypeRequest" xml:space="preserve">
+    <value>Type of request</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Usuario</value>
   </data>
 </root>

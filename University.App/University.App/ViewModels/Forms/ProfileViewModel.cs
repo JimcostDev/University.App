@@ -7,6 +7,7 @@ using System.Text;
 using University.BL.DTOs;
 using University.BL.Services.Implements;
 using Xamarin.Forms;
+using University.App.Helpers;
 
 namespace University.App.ViewModels.Forms
 {
@@ -75,12 +76,12 @@ namespace University.App.ViewModels.Forms
                     }
                 }
                 else
-                    await Application.Current.MainPage.DisplayAlert("Notification", responseDTO.Message, "Accept");
+                    await Application.Current.MainPage.DisplayAlert(Languages.Notification, responseDTO.Message, Languages.Accept);
             }
             catch (Exception ex)
             {
 
-                await Application.Current.MainPage.DisplayAlert("Notification", ex.Message, "Accept");
+                await Application.Current.MainPage.DisplayAlert(Languages.Notification, ex.Message, Languages.Accept);
             }
         }
         #endregion
@@ -104,21 +105,21 @@ namespace University.App.ViewModels.Forms
                 };
 
 
-                var responseDTO = await _apiService.RequestAPI<ResponseDTO>(Helpers.Endpoints.URL_BASE_UNIVERSITY_AUTH,
+                var responseDTO = await _apiService.RequestAPI<ResponseDTO>(Endpoints.URL_BASE_UNIVERSITY_AUTH,
                     Helpers.Endpoints.PROFILE,
                     profileDTO,
                     ApiService.Method.Post,
                     true);
 
                 if (responseDTO.Code == 200)
-                    await Application.Current.MainPage.DisplayAlert("Notification", "The process is successfull", "Accept");
+                    await Application.Current.MainPage.DisplayAlert(Languages.Notification, Languages.ProcessSuccessfull, Languages.Accept);
                 else
-                    await Application.Current.MainPage.DisplayAlert("Notification", responseDTO.Message, "Accept");
+                    await Application.Current.MainPage.DisplayAlert(Languages.Notification, responseDTO.Message, Languages.Accept);
             }
             catch (Exception ex)
             {
 
-                await Application.Current.MainPage.DisplayAlert("Notification", ex.Message, "Accept");
+                await Application.Current.MainPage.DisplayAlert(Languages.Notification, ex.Message, Languages.Accept);
             }
         }
         async void AddImage()

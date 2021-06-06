@@ -11,8 +11,12 @@ namespace University.App.ViewModels.Forms
         {
             public string Name { get; set; }
         }
-
+        public class RateService
+        {
+            public string Name { get; set; }
+        }
         private List<TypeRequest> _typeRequests;
+        private List<RateService> _rateServices;
         #endregion
 
         #region Properties
@@ -21,12 +25,18 @@ namespace University.App.ViewModels.Forms
             get { return this._typeRequests; }
             set { this.SetValue(ref this._typeRequests, value); }
         }
+        public List<RateService> RateServices
+        {
+            get { return this._rateServices; }
+            set { this.SetValue(ref this._rateServices, value); }
+        }
         #endregion
 
         #region Constructor
         public PQRSViewModel()
         {
             this.LoadTypeRequests();
+            this.LoadRateServices();
         }
         #endregion
         #region Methods
@@ -38,6 +48,17 @@ namespace University.App.ViewModels.Forms
                 new TypeRequest { Name = "Complain" },
                 new TypeRequest { Name = "Claim" },
                 new TypeRequest { Name = "Suggestion" }
+            };
+        }
+        private void LoadRateServices()
+        {
+            this.RateServices = new List<RateService>
+            {
+                new RateService { Name = "Bad" },
+                new RateService { Name = "Regular" },
+                new RateService { Name = "Well" },
+                new RateService { Name = "Acceptable" },
+                new RateService { Name = "Excellent" }
             };
         }
         #endregion

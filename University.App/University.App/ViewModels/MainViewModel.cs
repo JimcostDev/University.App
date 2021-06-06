@@ -13,6 +13,7 @@ namespace University.App.ViewModels
         public ProfileViewModel Profile { get; set; }    
         public AboutViewModel About { get; set; }    
         public PQRSViewModel PQRS { get; set; }    
+        public ChangePasswordViewModelh ChangePassword { get; set; }    
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
 
         #region Constructors
@@ -23,6 +24,7 @@ namespace University.App.ViewModels
 
             this.Login = new LoginViewModel();
             this.Register = new RegisterViewModel();
+            this.ChangePassword = new ChangePasswordViewModelh();
         }
         #endregion
 
@@ -54,6 +56,12 @@ namespace University.App.ViewModels
                     Icon = "ic_exit_to_app",
                     PageName = "ProfilePage",
                     Title = "Profile"
+                },
+                new MenuItemViewModel
+                {
+                    Icon = "ic_exit_to_app",
+                    PageName = "ChangePasswordPage",
+                    Title = "Change password"
                 }
             };
         }

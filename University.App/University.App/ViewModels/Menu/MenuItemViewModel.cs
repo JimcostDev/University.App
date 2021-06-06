@@ -34,10 +34,15 @@ namespace University.App.ViewModels.Menu
                 MainViewModel.GetInstance().Login = new LoginViewModel();
                 Application.Current.MainPage = new NavigationPage(new LoginPage());
             }
-            if (this.PageName.Equals("RegisterPage"))
+            else if (this.PageName.Equals("RegisterPage"))
             {
                 MainViewModel.GetInstance().Register = new RegisterViewModel();
                 Application.Current.MainPage = new NavigationPage(new RegisterPage());
+            }
+            else if (this.PageName.Equals("ChangePasswordPage"))
+            {
+                MainViewModel.GetInstance().Register = new ChangePasswordViewModelh();
+                Application.Current.MainPage = new NavigationPage(new ChangePasswordPage());
             }
             else if (this.PageName.Equals("ProfilePage"))
             {

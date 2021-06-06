@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="University.App.Views.Forms.PQRSPage"
+             xmlns:i18n="clr-namespace:University.App.Helpers"
+             xmlns:control="clr-namespace:University.App.Controls"
              BackgroundColor="{DynamicResource Gray-200}"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Resources>
@@ -23,9 +25,16 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
-                    <Label Text="Type of request"
+                    <Label Text="{i18n:Translate TypeRequest}"
                            FontSize="20"
                            HorizontalTextAlignment="Center"
                            Style="{StaticResource LabelStyle}"
@@ -33,13 +42,66 @@
 
                     <Picker Grid.Row="1"
                             HorizontalOptions="FillAndExpand"                            
-                            Title="Select type of request"
+                            Title="{i18n:Translate SelectTypeRequest}"
                             HorizontalTextAlignment="Center"
                             BackgroundColor="Transparent"
                             ItemsSource="{Binding TypeRequests}"
                             ItemDisplayBinding="{Binding Name}"/>
 
-                    <Button Grid.Row="2"
+                    <control:BorderlessEntry Grid.Row="2"
+                           Placeholder="{i18n:Translate Name}"
+                           PlaceholderColor="{DynamicResource Gray-700}"
+                                             TextColor="{DynamicResource Gray-600}"
+                                             Style="{StaticResource EntryStyle}"/>
+
+                    <control:BorderlessEntry Grid.Row="3"
+                           Placeholder="{i18n:Translate Surname}"
+                           PlaceholderColor="{DynamicResource Gray-700}"
+                                             TextColor="{DynamicResource Gray-600}"
+                                             Style="{StaticResource EntryStyle}"
+                                             />
+
+                    <control:BorderlessEntry Grid.Row="4"
+                           Placeholder="{i18n:Translate Direction}"
+                           IsPassword="True"
+                           PlaceholderColor="{DynamicResource Gray-700}"
+                                             TextColor="{DynamicResource Gray-600}"
+                                             Style="{StaticResource EntryStyle}"
+                                             Text="{Binding Password}"/>
+
+                    <control:BorderlessEntry Grid.Row="5"
+                           Placeholder="{i18n:Translate Phone}"
+                           IsPassword="True"
+                           PlaceholderColor="{DynamicResource Gray-700}"
+                                             TextColor="{DynamicResource Gray-600}"
+                                             Style="{StaticResource EntryStyle}"
+                                             />
+
+                    <control:BorderlessEntry Grid.Row="6"
+                           Placeholder="{i18n:Translate Email}"
+                           IsPassword="True"
+                           PlaceholderColor="{DynamicResource Gray-700}"
+                                             TextColor="{DynamicResource Gray-600}"
+                                             Style="{StaticResource EntryStyle}"
+                                             />
+                    
+                    <control:BorderlessEntry Grid.Row="7"
+                           Placeholder="{i18n:Translate Message}"
+                           IsPassword="True"
+                           PlaceholderColor="{DynamicResource Gray-700}"
+                                             TextColor="{DynamicResource Gray-600}"
+                                             Style="{StaticResource EntryStyle}"
+                                             />
+
+                    <Picker Grid.Row="1"
+                            HorizontalOptions="FillAndExpand"                            
+                            Title="{i18n:Translate RateOurService}"
+                            HorizontalTextAlignment="Center"
+                            BackgroundColor="Transparent"
+                            ItemsSource="{Binding RateOurServices}"
+                            ItemDisplayBinding="{Binding Name}"/>
+
+                    <Button Grid.Row="9"
                             Margin="0,16"
                             Text="Send"
                             Style="{StaticResource ButtonStyle}"/>

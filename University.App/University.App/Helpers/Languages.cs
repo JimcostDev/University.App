@@ -17,5 +17,8 @@ namespace University.App.Helpers
         public static string Notification { get { return Resource.Notification; } }
         public static string NoInternetConnection { get { return Resource.NoInternetConnection; } }
         public static string FieldsRequired { get { return Resource.FieldsRequired; } }
+        public static string RegisterSuccessfull { get { return Resource.RegisterSuccessfull; } }
+        public static string ChangePasswordSuccessfully { get { return Resource.ChangePasswordSuccessfully; } }
+        public static string ProcessSuccessfull { get { return Resource.ProcessSuccessfull; } }
     }
 }

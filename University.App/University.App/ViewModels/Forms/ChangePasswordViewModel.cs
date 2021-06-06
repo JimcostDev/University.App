@@ -1,32 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using University.App.Helpers;
 using University.App.Views.Forms;
-using University.App.Views.Menu;
 using University.BL.DTOs;
 using University.BL.Services.Implements;
 using Xamarin.Forms;
-using University.App.Helpers;
 
 namespace University.App.ViewModels.Forms
 {
-    public class RegisterViewModel : BaseViewModel
+    public class ChangePasswordViewModel : BaseViewModel
     {
         #region Attributes
-        private string _email;
+        private UserDTO _user;
+        private string _oldPassword;
         private string _password;
         private string _confirmPassword;
-        private bool _isEmailValid;
         private bool _isEnabled;
         private bool _isRunning;
         private ApiService _apiService;
         #endregion
 
         #region Properties
-        public string Email
+        public UserDTO User
         {
-            get { return this._email; }
-            set { this.SetValue(ref this._email, value); }
+            get { return this._user; }
+            set { this.SetValue(ref this._user, value); }
+        }
+        public string OldPassword
+        {
+            get { return this._oldPassword; }
+            set { this.SetValue(ref this._oldPassword, value); }
         }
         public string Password
         {
@@ -38,11 +40,7 @@ namespace University.App.ViewModels.Forms
             get { return this._confirmPassword; }
             set { this.SetValue(ref this._confirmPassword, value); }
         }
-        public bool IsEmailValid
-        {
-            get { return this._isEmailValid; }
-            set { this.SetValue(ref this._isEmailValid, value); }
-        }
+
         public bool IsEnabled
         {
             get { return this._isEnabled; }
@@ -57,12 +55,49 @@ namespace University.App.ViewModels.Forms
 
         #region Commands
         //Eventos
-        public Command RegisterCommand { get; set; }
-        public Command BackCommand { get; set; }
+        public Command ChangePasswordCommand { get; set; }
+        public Command GetUserCommand { get; set; }
+        #endregion
+
+        #region Constructor
+        public ChangePasswordViewModel()
+        {
+            this.IsEnabled = true;
+            this.IsRunning = false;
+
+            this.GetUserCommand = new Command(GetUser);
+            this.GetUserCommand.Execute(null);
+            this.ChangePasswordCommand = new Command(ChangePassword);
+            this._apiService = new ApiService();
+        }
         #endregion
 
         #region Methods
-        async void Register()
+        async void GetUser()
+        {
+            try
+            {
+                var userID = Helpers.Settings.UserID;
+                var responseDTO = await _apiService.RequestAPI<UserDTO>(Helpers.Endpoints.URL_BASE_UNIVERSITY_AUTH,
+                    Helpers.Endpoints.GET_USER + "?userID=" + userID,
+                    null,
+                    ApiService.Method.Get,
+                    true);
+
+                if (responseDTO.Code == 200)
+                {
+                    this.User = (UserDTO)responseDTO.Data;
+                }
+                else
+                    await Application.Current.MainPage.DisplayAlert(Languages.Notification, responseDTO.Message, Languages.Accept);
+            }
+            catch (Exception ex)
+            {
+
+                await Application.Current.MainPage.DisplayAlert(Languages.Notification, ex.Message, Languages.Accept);
+            }
+        }
+        async void ChangePassword()
         {
             try
             {
@@ -76,37 +111,38 @@ namespace University.App.ViewModels.Forms
                     return;
                 }
 
-                if (string.IsNullOrEmpty(this.Email) || string.IsNullOrEmpty(this.Password) || string.IsNullOrEmpty(this.ConfirmPassword))
+                if (string.IsNullOrEmpty(this.OldPassword) || string.IsNullOrEmpty(this.Password) || string.IsNullOrEmpty(this.ConfirmPassword))
                 {
                     this.IsRunning = false;
                     this.IsEnabled = true;
                     await Application.Current.MainPage.DisplayAlert(Languages.Notification, Languages.FieldsRequired, Languages.Accept);
                     return;
                 }
-
-                var registerDTO = new RegisterDTO
+                var userID = Helpers.Settings.UserID;
+                var changePasswordDTO = new ChangePasswordDTO
                 {
-                    Email = this.Email,
+                    UserID = userID,
+                    OldPassword = this.OldPassword,
                     Password = this.Password,
                     ConfirmPassword = this.ConfirmPassword
                 };
 
                 var responseDTO = await _apiService.RequestAPI<string>(Helpers.Endpoints.URL_BASE_UNIVERSITY_AUTH,
-                    Helpers.Endpoints.REGISTER,
-                    registerDTO,
+                    Helpers.Endpoints.CHANGE_PASSWORD,
+                    changePasswordDTO,
                     ApiService.Method.Post,
                     true);
 
                 if (responseDTO.Code == 200)
                 {
-                    await Application.Current.MainPage.DisplayAlert(Languages.Notification, Languages.RegisterSuccessfull, Languages.Accept);
+                    await Application.Current.MainPage.DisplayAlert(Languages.Notification, Languages.ChangePasswordSuccessfully, Languages.Accept);
                     Application.Current.MainPage = new LoginPage();
                     this.IsRunning = false;
                     this.IsEnabled = true;
                 }
                 else
                     await Application.Current.MainPage.DisplayAlert(Languages.Notification, responseDTO.Message, Languages.Accept);
-         
+
 
                 this.IsRunning = false;
                 this.IsEnabled = true;
@@ -117,26 +153,6 @@ namespace University.App.ViewModels.Forms
                 this.IsEnabled = true;
                 await Application.Current.MainPage.DisplayAlert(Languages.Notification, ex.Message, Languages.Accept);
             }
-        }
-        public void Back()
-        {
-            this.IsRunning = true;
-            this.IsEnabled = false;
-            Application.Current.MainPage = new LoginPage();
-            this.IsRunning = false;
-            this.IsEnabled = true;
-        }
-        #endregion
-
-        #region Constructor
-        public RegisterViewModel()
-        {
-            this.IsEmailValid = this.IsEnabled = true;
-            this.IsRunning = false;
-
-            this.RegisterCommand = new Command(Register);
-            this.BackCommand = new Command(Back);
-            this._apiService = new ApiService();
         }
         #endregion
     }

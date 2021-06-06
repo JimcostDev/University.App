@@ -4,6 +4,7 @@
              x:Class="University.App.Views.Forms.RegisterPage"
              NavigationPage.HasNavigationBar="False"
              xmlns:control="clr-namespace:University.App.Controls"
+             xmlns:i18n="clr-namespace:University.App.Helpers"
              BackgroundColor="{DynamicResource Gray-200}"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Resources>
@@ -42,11 +43,11 @@
                     <Label Grid.Row="1" 
                            Margin="0.8"
                            HorizontalTextAlignment="Center"
-                           Text="Register from here to access."
+                           Text="{i18n:Translate RegisterPageRegisterMember}"
                             Style="{StaticResource LabelStyle}"/>
 
                     <control:BorderlessEntry Grid.Row="2"
-                           Placeholder="Username"
+                           Placeholder="{i18n:Translate Username}"
                            Keyboard="Email"
                            PlaceholderColor="{DynamicResource Gray-700}"
                                              TextColor="{DynamicResource Gray-600}"
@@ -54,7 +55,7 @@
                                              Text="{Binding Email}"/>
 
                     <control:BorderlessEntry Grid.Row="3"
-                           Placeholder="Password"
+                           Placeholder="{i18n:Translate Password}"
                            IsPassword="True"
                            PlaceholderColor="{DynamicResource Gray-700}"
                                              TextColor="{DynamicResource Gray-600}"
@@ -62,7 +63,7 @@
                                              Text="{Binding Password}"/>
 
                     <control:BorderlessEntry Grid.Row="4"
-                           Placeholder="Confirm password"
+                           Placeholder="{i18n:Translate ConfirmPassword}"
                            IsPassword="True"
                            PlaceholderColor="{DynamicResource Gray-700}"
                                              TextColor="{DynamicResource Gray-600}"

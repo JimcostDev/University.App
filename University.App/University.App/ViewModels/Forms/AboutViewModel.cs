@@ -26,7 +26,7 @@ namespace University.App.ViewModels.Forms
         {
             try
             {
-                await Launcher.TryOpenAsync(new Uri(string.Format("https://www.youtube.com/watch?v={0}", "Wk_Sm3LbUcs")));
+                await Launcher.TryOpenAsync(new Uri(string.Format("https://www.youtube.com/watch?v={0}", "GvtNa5_raw4")));
             }
             catch (Exception ex)
             {

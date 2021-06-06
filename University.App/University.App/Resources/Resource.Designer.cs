@@ -61,11 +61,65 @@ namespace University.App.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a About us.
+        /// </summary>
+        public static string AboutUs {
+            get {
+                return ResourceManager.GetString("AboutUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Accept.
         /// </summary>
         public static string Accept {
             get {
                 return ResourceManager.GetString("Accept", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Change password from here to access.
+        /// </summary>
+        public static string ChangePassword {
+            get {
+                return ResourceManager.GetString("ChangePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Change password successfully.
+        /// </summary>
+        public static string ChangePasswordSuccessfully {
+            get {
+                return ResourceManager.GetString("ChangePasswordSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Confirm password.
+        /// </summary>
+        public static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Direction.
+        /// </summary>
+        public static string Direction {
+            get {
+                return ResourceManager.GetString("Direction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Email.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
             }
         }
         
@@ -106,6 +160,33 @@ namespace University.App.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Meet us.
+        /// </summary>
+        public static string MeetUs {
+            get {
+                return ResourceManager.GetString("MeetUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Message.
+        /// </summary>
+        public static string Message {
+            get {
+                return ResourceManager.GetString("Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a No internet connection.
         /// </summary>
         public static string NoInternetConnection {
@@ -120,6 +201,123 @@ namespace University.App.Resources {
         public static string Notification {
             get {
                 return ResourceManager.GetString("Notification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Old password.
+        /// </summary>
+        public static string OldPassword {
+            get {
+                return ResourceManager.GetString("OldPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Password.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Phone.
+        /// </summary>
+        public static string Phone {
+            get {
+                return ResourceManager.GetString("Phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a The process is successfull.
+        /// </summary>
+        public static string ProcessSuccessfull {
+            get {
+                return ResourceManager.GetString("ProcessSuccessfull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Rate our service.
+        /// </summary>
+        public static string RateOurService {
+            get {
+                return ResourceManager.GetString("RateOurService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Register.
+        /// </summary>
+        public static string Register {
+            get {
+                return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Register member from here to access.
+        /// </summary>
+        public static string RegisterPageRegisterMember {
+            get {
+                return ResourceManager.GetString("RegisterPageRegisterMember", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Register successfull.
+        /// </summary>
+        public static string RegisterSuccessfull {
+            get {
+                return ResourceManager.GetString("RegisterSuccessfull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a See more.
+        /// </summary>
+        public static string SeeMore {
+            get {
+                return ResourceManager.GetString("SeeMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Select type of request.
+        /// </summary>
+        public static string SelectTypeRequest {
+            get {
+                return ResourceManager.GetString("SelectTypeRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Surname.
+        /// </summary>
+        public static string Surname {
+            get {
+                return ResourceManager.GetString("Surname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Type of request.
+        /// </summary>
+        public static string TypeRequest {
+            get {
+                return ResourceManager.GetString("TypeRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Usuario.
+        /// </summary>
+        public static string Username {
+            get {
+                return ResourceManager.GetString("Username", resourceCulture);
             }
         }
     }

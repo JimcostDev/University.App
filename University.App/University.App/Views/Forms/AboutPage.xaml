@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="University.App.Views.Forms.AboutPage"
+             xmlns:i18n="clr-namespace:University.App.Helpers"
              BackgroundColor="{DynamicResource Gray-200}"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
 
@@ -30,7 +31,7 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
-                    <Label Text="About Us"
+                    <Label Text="{i18n:Translate AboutUs}"
                            FontSize="20"
                            HorizontalTextAlignment="Center"
                            Style="{StaticResource LabelStyle}"
@@ -45,13 +46,13 @@
 
                     <Button Grid.Row="2"
                             Margin="0,16"
-                            Text="Meet Us"
+                            Text="{i18n:Translate MeetUs}"
                             Style="{StaticResource ButtonStyle}"
                             Command="{Binding NavigateSiteCommand}"/>
 
                     <Button Grid.Row="3"
                             Margin="0,16"
-                            Text="See More"
+                            Text="{i18n:Translate SeeMore}"
                             Style="{StaticResource ButtonStyle}"
                             Command="{Binding NavigateYTCommand}"/>
 

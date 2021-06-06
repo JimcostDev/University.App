@@ -68,3 +68,5 @@ C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.csproj.GenerateResource.cache
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\es\University.App.resources.dll
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\ja\University.App.resources.dll
+C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\Views\Forms\AboutPage.xaml.g.cs
+C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\Views\Forms\PQRSPage.xaml.g.cs
