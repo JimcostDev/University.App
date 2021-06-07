@@ -3,7 +3,6 @@ C:\workspace-xamarin\Movil_II\University\University.App\University.App\bin\Debug
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\bin\Debug\netstandard2.0\ref\University.App.dll
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\bin\Debug\netstandard2.0\University.App.pdb
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\bin\Debug\netstandard2.0\es\University.App.resources.dll
-C:\workspace-xamarin\Movil_II\University\University.App\University.App\bin\Debug\netstandard2.0\ja\University.App.resources.dll
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\bin\Debug\netstandard2.0\University.BL.dll
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\bin\Debug\netstandard2.0\Plugin.Connectivity.dll
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\bin\Debug\netstandard2.0\Plugin.Connectivity.Abstractions.dll
@@ -17,7 +16,6 @@ C:\workspace-xamarin\Movil_II\University\University.App\University.App\bin\Debug
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.csprojAssemblyReference.cache
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.Resources.Resource.resources
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.Resources.Resource.es.resources
-C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.Resources.Resource.ja.resources
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.csproj.GenerateResource.cache
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
@@ -37,7 +35,6 @@ C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.csproj.CoreCompileInputs.cache
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\XamlC.stamp
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\es\University.App.resources.dll
-C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\ja\University.App.resources.dll
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.csproj.CopyComplete
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\University.App.dll
 C:\workspace-xamarin\Movil_II\University\University.App\University.App\obj\Debug\netstandard2.0\ref\University.App.dll

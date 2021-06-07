@@ -87,6 +87,7 @@ namespace University.App.ViewModels.Forms
                 if (responseDTO.Code == 200)
                 {
                     this.User = (UserDTO)responseDTO.Data;
+                    await Application.Current.MainPage.DisplayAlert(Languages.Notification, Languages.ProcessSuccessfull, Languages.Accept);
                 }
                 else
                     await Application.Current.MainPage.DisplayAlert(Languages.Notification, responseDTO.Message, Languages.Accept);

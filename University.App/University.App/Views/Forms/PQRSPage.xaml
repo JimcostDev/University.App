@@ -32,6 +32,7 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
                     <Label Text="{i18n:Translate TypeRequest}"
@@ -84,7 +85,7 @@
                                              TextColor="{DynamicResource Gray-600}"
                                              Style="{StaticResource EntryStyle}"
                                              />
-                    
+
                     <control:BorderlessEntry Grid.Row="7"
                            Placeholder="{i18n:Translate Message}"
                            IsPassword="True"
@@ -93,7 +94,7 @@
                                              Style="{StaticResource EntryStyle}"
                                              />
 
-                    <Picker Grid.Row="1"
+                    <Picker Grid.Row="8"
                             HorizontalOptions="FillAndExpand"                            
                             Title="{i18n:Translate RateOurService}"
                             HorizontalTextAlignment="Center"
@@ -106,7 +107,7 @@
                             Text="Send"
                             Style="{StaticResource ButtonStyle}"/>
 
-                    
+
 
                 </Grid>
             </StackLayout>

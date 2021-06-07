@@ -123,6 +123,9 @@
   <data name="Accept" xml:space="preserve">
     <value>Accept</value>
   </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
   <data name="ChangePassword" xml:space="preserve">
     <value>Change password from here to access</value>
   </data>
@@ -202,6 +205,6 @@
     <value>Type of request</value>
   </data>
   <data name="Username" xml:space="preserve">
-    <value>Usuario</value>
+    <value>Username</value>
   </data>
 </root>

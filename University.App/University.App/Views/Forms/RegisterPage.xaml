@@ -72,14 +72,14 @@
 
                     <Button Grid.Row="5"
                             Margin="0.16"
-                            Text="Register"
+                            Text="{i18n:Translate Register}"
                             Style="{StaticResource ButtonStyle}"
                             Command="{Binding RegisterCommand}"
                             IsEnabled="{Binding IsEnabled}"/>
 
                     <Button Grid.Row="6"
                             Margin="0.16"
-                            Text="Back"
+                            Text="{i18n:Translate Back}"
                             TextTransform="None"
                             Style="{StaticResource LinkStyle}"
                             Command="{Binding BackCommand}"

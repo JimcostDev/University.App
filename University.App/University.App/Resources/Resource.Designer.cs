@@ -79,6 +79,15 @@ namespace University.App.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Back.
+        /// </summary>
+        public static string Back {
+            get {
+                return ResourceManager.GetString("Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Change password from here to access.
         /// </summary>
         public static string ChangePassword {
@@ -313,7 +322,7 @@ namespace University.App.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Usuario.
+        ///   Busca una cadena traducida similar a Username.
         /// </summary>
         public static string Username {
             get {
