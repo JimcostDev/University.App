@@ -88,7 +88,7 @@ namespace University.App.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Change password from here to access.
+        ///   Busca una cadena traducida similar a Change password.
         /// </summary>
         public static string ChangePassword {
             get {
@@ -165,6 +165,15 @@ namespace University.App.Resources {
         public static string LoginPageLoginMember {
             get {
                 return ResourceManager.GetString("LoginPageLoginMember", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Log out.
+        /// </summary>
+        public static string LogOut {
+            get {
+                return ResourceManager.GetString("LogOut", resourceCulture);
             }
         }
         
@@ -250,6 +259,15 @@ namespace University.App.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Profile.
+        /// </summary>
+        public static string Profile {
+            get {
+                return ResourceManager.GetString("Profile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Rate our service.
         /// </summary>
         public static string RateOurService {
@@ -304,6 +322,15 @@ namespace University.App.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Send.
+        /// </summary>
+        public static string Send {
+            get {
+                return ResourceManager.GetString("Send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Surname.
         /// </summary>
         public static string Surname {
@@ -318,6 +345,15 @@ namespace University.App.Resources {
         public static string TypeRequest {
             get {
                 return ResourceManager.GetString("TypeRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update.
+        /// </summary>
+        public static string Update {
+            get {
+                return ResourceManager.GetString("Update", resourceCulture);
             }
         }
         

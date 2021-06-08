@@ -19,6 +19,10 @@ namespace University.App.Helpers
         public static string FieldsRequired { get { return Resource.FieldsRequired; } }
         public static string RegisterSuccessfull { get { return Resource.RegisterSuccessfull; } }
         public static string ChangePasswordSuccessfully { get { return Resource.ChangePasswordSuccessfully; } }
+        public static string LogOut { get { return Resource.LogOut; } }
+        public static string AboutUs { get { return Resource.AboutUs; } }
+        public static string Profile { get { return Resource.Profile; } }
+        public static string ChangePassword { get { return Resource.ChangePassword; } }
         public static string ProcessSuccessfull { get { return Resource.ProcessSuccessfull; } }
     }
 }

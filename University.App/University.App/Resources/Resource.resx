@@ -127,7 +127,7 @@
     <value>Back</value>
   </data>
   <data name="ChangePassword" xml:space="preserve">
-    <value>Change password from here to access</value>
+    <value>Change password</value>
   </data>
   <data name="ChangePasswordSuccessfully" xml:space="preserve">
     <value>Change password successfully</value>
@@ -152,6 +152,9 @@
   </data>
   <data name="LoginPageLoginMember" xml:space="preserve">
     <value>Login or member from here to access</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Log out</value>
   </data>
   <data name="MeetUs" xml:space="preserve">
     <value>Meet us</value>
@@ -180,6 +183,9 @@
   <data name="ProcessSuccessfull" xml:space="preserve">
     <value>The process is successfull</value>
   </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
   <data name="RateOurService" xml:space="preserve">
     <value>Rate our service</value>
   </data>
@@ -198,11 +204,17 @@
   <data name="SelectTypeRequest" xml:space="preserve">
     <value>Select type of request</value>
   </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
   <data name="Surname" xml:space="preserve">
     <value>Surname</value>
   </data>
   <data name="TypeRequest" xml:space="preserve">
     <value>Type of request</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>Username</value>

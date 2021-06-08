@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using University.App.Helpers;
 using University.App.ViewModels.Forms;
 using University.App.ViewModels.Menu;
 using Xamarin.Forms;
@@ -23,8 +24,7 @@ namespace University.App.ViewModels
             this.LoadMenu();
 
             this.Login = new LoginViewModel();
-            this.Register = new RegisterViewModel();
-            this.ChangePassword = new ChangePasswordViewModel();
+            this.Register = new RegisterViewModel();            
         }
         #endregion
 
@@ -37,13 +37,13 @@ namespace University.App.ViewModels
                 {
                     Icon = "ic_exit_to_app",
                     PageName = "LoginPage",
-                    Title = "Log out"
+                    Title = Languages.LogOut
                 },
                 new MenuItemViewModel
                 {
                     Icon = "ic_exit_to_app",
                     PageName = "AboutPage",
-                    Title = "About"
+                    Title = Languages.AboutUs
                 },
                 new MenuItemViewModel
                 {
@@ -55,13 +55,13 @@ namespace University.App.ViewModels
                 {
                     Icon = "ic_exit_to_app",
                     PageName = "ProfilePage",
-                    Title = "Profile"
+                    Title = Languages.Profile
                 },
                 new MenuItemViewModel
                 {
                     Icon = "ic_exit_to_app",
                     PageName = "ChangePasswordPage",
-                    Title = "Change password"
+                    Title = Languages.ChangePassword
                 }
             };
         }

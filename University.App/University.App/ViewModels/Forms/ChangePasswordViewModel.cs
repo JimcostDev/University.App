@@ -62,13 +62,14 @@ namespace University.App.ViewModels.Forms
         #region Constructor
         public ChangePasswordViewModel()
         {
+            this._apiService = new ApiService();
+
             this.IsEnabled = true;
             this.IsRunning = false;
 
             this.GetUserCommand = new Command(GetUser);
             this.GetUserCommand.Execute(null);
-            this.ChangePasswordCommand = new Command(ChangePassword);
-            this._apiService = new ApiService();
+            this.ChangePasswordCommand = new Command(ChangePassword);            
         }
         #endregion
 
@@ -84,13 +85,13 @@ namespace University.App.ViewModels.Forms
                     ApiService.Method.Get,
                     true);
 
-                if (responseDTO.Code == 200)
+                if (responseDTO.Code != 200)
                 {
                     this.User = (UserDTO)responseDTO.Data;
-                    await Application.Current.MainPage.DisplayAlert(Languages.Notification, Languages.ProcessSuccessfull, Languages.Accept);
-                }
-                else
                     await Application.Current.MainPage.DisplayAlert(Languages.Notification, responseDTO.Message, Languages.Accept);
+                }
+                
+                    
             }
             catch (Exception ex)
             {

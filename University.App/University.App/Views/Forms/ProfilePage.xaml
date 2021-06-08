@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="University.App.Views.Forms.ProfilePage"
+             xmlns:i18n="clr-namespace:University.App.Helpers"
              BackgroundColor="{DynamicResource Gray-200}"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
 
@@ -41,7 +42,7 @@
 
                     <Button Grid.Row="1"
                             Margin="0.16"
-                            Text="Update"
+                            Text="{i18n:Translate Update}"
                             Style="{StaticResource ButtonStyle}"
                             Command="{Binding EditProfileCommand}"/>
 

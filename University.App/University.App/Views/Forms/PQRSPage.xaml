@@ -42,7 +42,8 @@
                            TextColor="{DynamicResource Gray-900}"/>
 
                     <Picker Grid.Row="1"
-                            HorizontalOptions="FillAndExpand"                            
+                            HorizontalOptions="FillAndExpand"  
+                            FontSize="16"
                             Title="{i18n:Translate SelectTypeRequest}"
                             HorizontalTextAlignment="Center"
                             BackgroundColor="Transparent"
@@ -95,16 +96,17 @@
                                              />
 
                     <Picker Grid.Row="8"
-                            HorizontalOptions="FillAndExpand"                            
+                            HorizontalOptions="FillAndExpand" 
+                            FontSize="16"
                             Title="{i18n:Translate RateOurService}"
                             HorizontalTextAlignment="Center"
                             BackgroundColor="Transparent"
-                            ItemsSource="{Binding RateOurServices}"
+                            ItemsSource="{Binding RateServices}"
                             ItemDisplayBinding="{Binding Name}"/>
 
                     <Button Grid.Row="9"
                             Margin="0,16"
-                            Text="Send"
+                            Text="{i18n:Translate Send}"
                             Style="{StaticResource ButtonStyle}"/>
 
 
