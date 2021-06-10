@@ -79,11 +79,29 @@ namespace University.App.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Acceptable.
+        /// </summary>
+        public static string Acceptable {
+            get {
+                return ResourceManager.GetString("Acceptable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Back.
         /// </summary>
         public static string Back {
             get {
                 return ResourceManager.GetString("Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Bad.
+        /// </summary>
+        public static string Bad {
+            get {
+                return ResourceManager.GetString("Bad", resourceCulture);
             }
         }
         
@@ -102,6 +120,24 @@ namespace University.App.Resources {
         public static string ChangePasswordSuccessfully {
             get {
                 return ResourceManager.GetString("ChangePasswordSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Claim.
+        /// </summary>
+        public static string Claim {
+            get {
+                return ResourceManager.GetString("Claim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Complain.
+        /// </summary>
+        public static string Complain {
+            get {
+                return ResourceManager.GetString("Complain", resourceCulture);
             }
         }
         
@@ -129,6 +165,15 @@ namespace University.App.Resources {
         public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Excellent.
+        /// </summary>
+        public static string Excellent {
+            get {
+                return ResourceManager.GetString("Excellent", resourceCulture);
             }
         }
         
@@ -241,6 +286,15 @@ namespace University.App.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Petition.
+        /// </summary>
+        public static string Petition {
+            get {
+                return ResourceManager.GetString("Petition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Phone.
         /// </summary>
         public static string Phone {
@@ -304,6 +358,15 @@ namespace University.App.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Regular.
+        /// </summary>
+        public static string Regular {
+            get {
+                return ResourceManager.GetString("Regular", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a See more.
         /// </summary>
         public static string SeeMore {
@@ -327,6 +390,15 @@ namespace University.App.Resources {
         public static string Send {
             get {
                 return ResourceManager.GetString("Send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Suggestion.
+        /// </summary>
+        public static string Suggestion {
+            get {
+                return ResourceManager.GetString("Suggestion", resourceCulture);
             }
         }
         
@@ -363,6 +435,15 @@ namespace University.App.Resources {
         public static string Username {
             get {
                 return ResourceManager.GetString("Username", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Well.
+        /// </summary>
+        public static string Well {
+            get {
+                return ResourceManager.GetString("Well", resourceCulture);
             }
         }
     }

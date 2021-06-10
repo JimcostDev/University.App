@@ -24,5 +24,14 @@ namespace University.App.Helpers
         public static string Profile { get { return Resource.Profile; } }
         public static string ChangePassword { get { return Resource.ChangePassword; } }
         public static string ProcessSuccessfull { get { return Resource.ProcessSuccessfull; } }
+        public static string Petition { get { return Resource.Petition; } }
+        public static string Complain { get { return Resource.Complain; } }
+        public static string Claim { get { return Resource.Claim; } }
+        public static string Suggestion { get { return Resource.Suggestion; } }
+        public static string Bad { get { return Resource.Bad; } }
+        public static string Regular { get { return Resource.Regular; } }
+        public static string Well { get { return Resource.Well; } }
+        public static string Acceptable { get { return Resource.Acceptable; } }
+        public static string Excellent { get { return Resource.Excellent; } }
     }
 }

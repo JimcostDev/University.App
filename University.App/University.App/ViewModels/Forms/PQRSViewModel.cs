@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using University.App.Helpers;
 
 namespace University.App.ViewModels.Forms
 {
@@ -44,21 +45,21 @@ namespace University.App.ViewModels.Forms
         {
             this.TypeRequests = new List<TypeRequest>
             {
-                new TypeRequest { Name = "Petition" },
-                new TypeRequest { Name = "Complain" },
-                new TypeRequest { Name = "Claim" },
-                new TypeRequest { Name = "Suggestion" }
+                new TypeRequest { Name = Languages.Petition },
+                new TypeRequest { Name = Languages.Complain },
+                new TypeRequest { Name = Languages.Claim },
+                new TypeRequest { Name = Languages.Suggestion }
             };
         }
         private void LoadRateServices()
         {
             this.RateServices = new List<RateService>
             {
-                new RateService { Name = "Bad" },
-                new RateService { Name = "Regular" },
-                new RateService { Name = "Well" },
-                new RateService { Name = "Acceptable" },
-                new RateService { Name = "Excellent" }
+                new RateService { Name = Languages.Bad },
+                new RateService { Name = Languages.Regular },
+                new RateService { Name = Languages.Well },
+                new RateService { Name = Languages.Acceptable },
+                new RateService { Name = Languages.Excellent }
             };
         }
         #endregion

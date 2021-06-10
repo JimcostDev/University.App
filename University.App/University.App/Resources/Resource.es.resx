@@ -123,14 +123,26 @@
   <data name="Accept" xml:space="preserve">
     <value>Aceptar</value>
   </data>
+  <data name="Acceptable" xml:space="preserve">
+    <value>Aceptable</value>
+  </data>
   <data name="Back" xml:space="preserve">
     <value>Volver</value>
+  </data>
+  <data name="Bad" xml:space="preserve">
+    <value>Malo</value>
   </data>
   <data name="ChangePassword" xml:space="preserve">
     <value>Cambiar contraseña </value>
   </data>
   <data name="ChangePasswordSuccessfully" xml:space="preserve">
     <value>Se cambio contraseña correctamente</value>
+  </data>
+  <data name="Claim" xml:space="preserve">
+    <value>reclamar</value>
+  </data>
+  <data name="Complain" xml:space="preserve">
+    <value>Quejarse</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
     <value>Confirmar contraseña</value>
@@ -140,6 +152,9 @@
   </data>
   <data name="Email" xml:space="preserve">
     <value>Correo</value>
+  </data>
+  <data name="Excellent" xml:space="preserve">
+    <value>Excelente</value>
   </data>
   <data name="FieldsRequired" xml:space="preserve">
     <value>Los campos son requeridos</value>
@@ -177,6 +192,9 @@
   <data name="Password" xml:space="preserve">
     <value>Contraseña</value>
   </data>
+  <data name="Petition" xml:space="preserve">
+    <value>Petición</value>
+  </data>
   <data name="Phone" xml:space="preserve">
     <value>Celular</value>
   </data>
@@ -198,6 +216,9 @@
   <data name="RegisterSuccessfull" xml:space="preserve">
     <value>Registro exitoso</value>
   </data>
+  <data name="Regular" xml:space="preserve">
+    <value>Regular</value>
+  </data>
   <data name="SeeMore" xml:space="preserve">
     <value>Saber más</value>
   </data>
@@ -206,6 +227,9 @@
   </data>
   <data name="Send" xml:space="preserve">
     <value>Enviar</value>
+  </data>
+  <data name="Suggestion" xml:space="preserve">
+    <value>Sugerencia</value>
   </data>
   <data name="Surname" xml:space="preserve">
     <value>Apellido</value>
@@ -218,5 +242,8 @@
   </data>
   <data name="Username" xml:space="preserve">
     <value>Usuario</value>
+  </data>
+  <data name="Well" xml:space="preserve">
+    <value>Bueno</value>
   </data>
 </root>

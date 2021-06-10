@@ -123,14 +123,26 @@
   <data name="Accept" xml:space="preserve">
     <value>Accept</value>
   </data>
+  <data name="Acceptable" xml:space="preserve">
+    <value>Acceptable</value>
+  </data>
   <data name="Back" xml:space="preserve">
     <value>Back</value>
+  </data>
+  <data name="Bad" xml:space="preserve">
+    <value>Bad</value>
   </data>
   <data name="ChangePassword" xml:space="preserve">
     <value>Change password</value>
   </data>
   <data name="ChangePasswordSuccessfully" xml:space="preserve">
     <value>Change password successfully</value>
+  </data>
+  <data name="Claim" xml:space="preserve">
+    <value>Claim</value>
+  </data>
+  <data name="Complain" xml:space="preserve">
+    <value>Complain</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
     <value>Confirm password</value>
@@ -140,6 +152,9 @@
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
+  </data>
+  <data name="Excellent" xml:space="preserve">
+    <value>Excellent</value>
   </data>
   <data name="FieldsRequired" xml:space="preserve">
     <value>The fields are required</value>
@@ -177,6 +192,9 @@
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="Petition" xml:space="preserve">
+    <value>Petition</value>
+  </data>
   <data name="Phone" xml:space="preserve">
     <value>Phone</value>
   </data>
@@ -198,6 +216,9 @@
   <data name="RegisterSuccessfull" xml:space="preserve">
     <value>Register successfull</value>
   </data>
+  <data name="Regular" xml:space="preserve">
+    <value>Regular</value>
+  </data>
   <data name="SeeMore" xml:space="preserve">
     <value>See more</value>
   </data>
@@ -206,6 +227,9 @@
   </data>
   <data name="Send" xml:space="preserve">
     <value>Send</value>
+  </data>
+  <data name="Suggestion" xml:space="preserve">
+    <value>Suggestion</value>
   </data>
   <data name="Surname" xml:space="preserve">
     <value>Surname</value>
@@ -218,5 +242,8 @@
   </data>
   <data name="Username" xml:space="preserve">
     <value>Username</value>
+  </data>
+  <data name="Well" xml:space="preserve">
+    <value>Well</value>
   </data>
 </root>
